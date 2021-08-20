@@ -5,6 +5,9 @@
 # Dependencies: imagemagick, i3lock-color-git, scrot, wmctrl (optional)
 set -o errexit -o noclobber -o nounset
 
+# Set the paused status of dunst
+dunstctl set-paused true
+
 hue=(-level "0%,100%,0.6")
 effect=(-filter Gaussian -resize 20% -define "filter:sigma=1.5" -resize 500.5%)
 # default system sans-serif font
@@ -146,3 +149,6 @@ fi
 # As above, if we were passed -d/--desktop, we'll attempt to restore all windows
 # after unlocking.
 ${desktop} ${desktop:+-k off}
+
+# Set the paused status of dunst
+dunstctl set-paused false

@@ -19,7 +19,8 @@ V='#88C0D0ff' # verif ring
 # --{time, date, layout, verif, wrong, greeter}-font=sans-serif
 #----------------
 
-notify-send "DUNST_COMMAND_PAUSE"
+# Set the paused status of dunst
+dunstctl set-paused true
 
 # font to use
 # FONT="VictorMono Nerd Font"
@@ -71,6 +72,8 @@ i3lock \
     --modsize=10 \
     --radius=200
 
-notify-send "DUNST_COMMAND_RESUME"
+# Set the paused status of dunst
+dunstctl set-paused false
+
 sleep 1
 exit

@@ -1,6 +1,8 @@
 #!/bin/sh
 
-# set this to the background path
+# Set the paused status of dunst
+dunstctl set-paused false
+
 BACKGROUND="$HOME/Scripts/i3lock/i3lock-calvin/wallpaper.png"
 
 i3lock --nofork \
@@ -40,3 +42,6 @@ i3lock --nofork \
     --wrongtext="No Entry!" \
     \
     --image="$BACKGROUND"
+
+# Set the paused status of dunst
+dunstctl set-paused true

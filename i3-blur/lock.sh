@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Set the paused status of dunst
+dunstctl set-paused true
+
 # set this to the location where the script is
 CUR_DIR="$HOME/Scripts/i3lock/i3-blur"
 
@@ -84,3 +87,6 @@ i3lock -i "$image" "${param[@]}" --ignore-empty-password \
     --wrongpos="953:700" \
     --wrongcolor=$font_color \
     --no-modkeytext
+
+# Set the paused status of dunst
+dunstctl set-paused false
